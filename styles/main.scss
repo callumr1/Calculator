@@ -1,0 +1,107 @@
+@import 'variables.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Gugi", "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    transition: 0.2s;
+    background-color: $background;
+}
+
+// Shared Styles
+
+.num-btn, 
+.operation-btn,
+.blank-btn {
+    border: 0;
+    border-radius: 300698px;
+    font-size: 1.5rem;
+    font-family: "Gugi", "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    padding: 1rem;
+    margin: 0.2rem;
+    transition: 0.3s;
+}
+
+.num-btn:focus, 
+.operation-btn:focus {
+    outline: none;
+}
+
+.num-btn:active, 
+.operation-btn:active {
+    transform: translateY(0.2rem);
+    transition: 0.3s;
+}
+
+// Specific Styles
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: $calc-background;
+    border-radius: 1rem;
+    width: 25rem;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.calc-screen {
+    font-size: 3rem;
+    font-family: "Gugi", "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    word-wrap: break-word;
+    max-width: 100%;
+    height: 10rem;
+    color: $font-main;
+    text-align: right;
+    padding: 1rem;
+    border: 2px solid rgba($font-main, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.calc-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.calc-num-btns {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+.calc-operations-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+}
+
+.num-btn {
+    background-color: $button-main;
+    color: $font-main;
+    width: 30%;
+}
+
+.blank-btn {
+    background-color: $calc-background;
+    width: 30%;
+}
+
+.operation-btn {
+    background-color: $button-secondary;
+    width: 95%;
+}
+
+.equals-btn {
+    width: 175% !important;
+}
+
+.clear-btn {
+    color: $button-secondary !important;
+}

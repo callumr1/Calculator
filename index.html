@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="html">
+
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/minireset.min.css" />
+    
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="calc-screen">0</div>
+        <div class="calc-buttons">
+            <div class="calc-num-btns">
+                <button class="num-btn" data-action="delete"><i class="fas fa-backspace"></i></button>
+                <button class="num-btn" data-action="brackets">()</button>
+                <button class="num-btn clear-btn" data-action="clear">C</button>
+                <button class="num-btn">9</button>
+                <button class="num-btn">8</button>
+                <button class="num-btn">7</button>
+                <button class="num-btn">6</button>
+                <button class="num-btn">5</button>
+                <button class="num-btn">4</button>
+                <button class="num-btn">3</button>
+                <button class="num-btn">2</button>
+                <button class="num-btn">1</button>
+                <button class="blank-btn"></button>
+                <button class="num-btn">0</button>
+                <button class="num-btn" data-action="decimal">.</button>
+            </div>
+            <div class="calc-operations-btns">
+                <button class="operation-btn" data-action="divide"><i class="fas fa-divide"></i></button>
+                <button class="operation-btn" data-action="multiply"><i class="fas fa-times"></i></button>
+                <button class="operation-btn" data-action="minus"><i class="fas fa-minus"></i></button>
+                <button class="operation-btn" data-action="add"><i class="fas fa-plus"></i></button>
+                <button class="operation-btn equals-btn" data-action="calculate"><i class="fas fa-equals"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="site.js"></script>
+
+</html>
