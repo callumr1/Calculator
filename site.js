@@ -2,7 +2,7 @@ const calculator = document.querySelector(".calculator");
 const btns = calculator.querySelector(".calc-buttons");
 const display = calculator.querySelector(".calc-screen");
 
-var calculated = false;
+let calculated = false;
 
 btns.addEventListener("click", e => {
     if (e.target.matches("button")) {
@@ -16,7 +16,7 @@ btns.addEventListener("click", e => {
                 display.textContent = keyContent;
                 calculated = false;
             } else if (displayedNum.length === 24) {
-                alert("Wow... Thats a big number. You can only enter an equation that is less than 24 characters.");
+                alert("Wow... That's a big number. You can only enter an equation that is less than 24 characters.");
             } else {
                 display.textContent = displayedNum + keyContent;
             }
@@ -44,8 +44,7 @@ btns.addEventListener("click", e => {
         }
         else if (action === "calculate") {
             try {
-                result = eval(display.textContent);
-                display.textContent = result;
+                display.textContent = eval(display.textContent);
             } catch (error) {
                 display.textContent = "ERROR";
             }
@@ -60,7 +59,7 @@ btns.addEventListener("click", e => {
             calculated = false;
         }
         else if (action === "delete") {
-            var newStr = displayedNum.substring(0, displayedNum.length - 1);
+            let newStr = displayedNum.substring(0, displayedNum.length - 1);
             if (newStr.length === 0) {
                 display.textContent = "0";
             } else {
