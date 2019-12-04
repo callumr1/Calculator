@@ -1,34 +1,35 @@
 @import 'variables.scss';
 
 body {
+    align-items: center;
+    background-color: $background;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     font-family: "Gugi", "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
     font-size: 16px;
+    height: 100vh;
+    justify-content: center;
     transition: 0.2s;
-    background-color: $background;
 }
 
 // Shared Styles
-
 .num-btn, 
 .operation-btn,
 .blank-btn {
-    border: 0;
+    border: 2px solid;
     border-radius: 300698px;
     font-size: 1.5rem;
     font-family: "Gugi", "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
-    padding: 1rem;
     margin: 0.2rem;
+    padding: 1rem;
     transition: 0.3s;
 }
 
 .num-btn:focus, 
-.operation-btn:focus {
-    outline: none;
+.operation-btn:focus,
+.calc-screen:focus {
+    border-color: $focus-main;
+    outline: none
 }
 
 .num-btn:active, 
@@ -38,28 +39,29 @@ body {
 }
 
 // Specific Styles
-
 .calculator {
+    background-color: $calc-background;
+    border: 2px solid rgba($font-main, 0.2);
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    background-color: $calc-background;
-    border-radius: 1rem;
-    width: 25rem;
     padding: 2rem 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    max-width: 25rem;
 }
 
 .calc-screen {
+    background-color: $calc-screen-background;
+    border: 2px solid rgba($font-main, 0.2);
+    box-shadow: inset 0px 0px 30px 8px rgba($calc-screen-shadow,0.1);
+    color: $font-main;
     font-size: 3rem;
     font-family: "Gugi", "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
-    word-wrap: break-word;
-    max-width: 100%;
     height: 10rem;
-    color: $font-main;
-    text-align: right;
-    padding: 1rem;
-    border: 2px solid rgba($font-main, 0.2);
+    word-wrap: break-word;
     margin-bottom: 1.5rem;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: right;
 }
 
 .calc-buttons {
@@ -76,25 +78,28 @@ body {
 }
 
 .calc-operations-btns {
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     width: 30%;
 }
 
 .num-btn {
     background-color: $button-main;
+    border-color: $button-main;
     color: $font-main;
     width: 30%;
 }
 
 .blank-btn {
     background-color: $calc-background;
+    border-color: $calc-background;
     width: 30%;
 }
 
 .operation-btn {
     background-color: $button-secondary;
+    border-color: $button-secondary;
     width: 95%;
 }
 
@@ -104,4 +109,24 @@ body {
 
 .clear-btn {
     color: $button-secondary !important;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    color: $font-main;
+}
+
+.footer a {
+    color: $button-secondary;
+}
+
+@media screen and (max-width: 360px){
+    .num-btn, 
+    .operation-btn,
+    .blank-btn {
+        padding: 0.5rem;
+    }
 }

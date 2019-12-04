@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html lang="html">
+<html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Simple Calculator in dark mode">
+
+    <title>Calcualtor</title>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -11,13 +17,11 @@
 
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="styles/minireset.min.css" />
-
-    <title>Calculator</title>
 </head>
 
 <body>
     <div class="calculator">
-        <div class="calc-screen">0</div>
+        <div class="calc-screen" tabindex="0">0</div>
         <div class="calc-buttons">
             <div class="calc-num-btns">
                 <button class="num-btn" data-action="delete"><i class="fas fa-backspace"></i></button>
@@ -32,7 +36,7 @@
                 <button class="num-btn">3</button>
                 <button class="num-btn">2</button>
                 <button class="num-btn">1</button>
-                <button class="blank-btn"></button>
+                <div class="blank-btn"></div>
                 <button class="num-btn">0</button>
                 <button class="num-btn" data-action="decimal">.</button>
             </div>
@@ -45,8 +49,14 @@
             </div>
         </div>
     </div>
+    <div class="footer">
+        <p>Project created by <a href="http://www.callumrobertson.me">Callum Robertson</a></p>
+        <p>Source code available on <a href="https://github.com/callumr1/Calculator">Github</a></p>
+    </div>
 </body>
 
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="site.js"></script>
 
 </html>
